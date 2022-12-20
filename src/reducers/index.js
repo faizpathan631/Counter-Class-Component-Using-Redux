@@ -1,8 +1,7 @@
 import { combineReducers } from 'redux'
-import { initialState } from '../initialState'
 import { ADD_COUNTER, MIN_COUNTER, RESET_COUNTER } from '../actionTypes'
 
-export function counterApp(state = initialState, action) {
+export function counterApp(state = { counter: 1 }, action) {
   switch (action.type) {
     case ADD_COUNTER:
       return {
