@@ -19,15 +19,15 @@ class Counter extends Component {
     return (
       <div>
         <button type='button' onClick={this.add}>
-          Add +
+          Add + 1
         </button>
         &nbsp;&nbsp;
         <button type='button' onClick={this.less}>
-          Sub -
+          Sub - 1
         </button>
         &nbsp;&nbsp;
         <button type='button' onClick={this.reset}>
-          Reset
+          Reset to 0
         </button>
         <br></br>
         <br></br>
