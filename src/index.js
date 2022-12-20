@@ -1,11 +1,19 @@
 import React from 'react'
-import Routing from './Routes'
-import { createRoot } from 'react-dom/client'
+import ReactDOM from 'react-dom'
+import App from './App'
+import { Provider } from 'react-redux'
+import { legacy_createStore } from 'redux'
+import rootReducer from './reducers'
 
-const container = document.getElementById('root')
-const root = createRoot(container)
-root.render(
-  <React.StrictMode>
-    <Routing />
-  </React.StrictMode>
+const store = legacy_createStore(
+  rootReducer,
+  //needed for dev tools
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
 )
