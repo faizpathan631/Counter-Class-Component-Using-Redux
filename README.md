@@ -1,1 +1,1 @@
-# -Class-Using-Redux
+# Counter-app-using-Class-components-Using-Redux
